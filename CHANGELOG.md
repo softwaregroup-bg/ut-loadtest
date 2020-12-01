@@ -1,3 +1,12 @@
+## [6.1.1](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.0...v6.1.1) (2020-12-01)
+
+
+### Bug Fixes
+
+* round ([012107e](https://github.com/softwaregroup-bg/ut-loadtest/commit/012107e744590c251f4242f621b58701718c9a4f))
+
+
+
 # 6.1.0 (2020-12-01)
 
 
