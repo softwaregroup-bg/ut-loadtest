@@ -53,7 +53,7 @@ module.exports = ({
         return result;
     }
 
-    async exec({autocannon: {auth, filename, path, ...autocannon} = {}, ...params}, {method}) {
+    async exec({autocannon: {auth, filename, path, name, ...autocannon} = {}, ...params}, {method}) {
         const login = await this.bus.discoverService('login');
         const {hostname, protocol, port} = login;
         const codec = await this.gateway({
@@ -90,7 +90,8 @@ module.exports = ({
             result.on('response', (client, statusCode, bytes, time) => {
                 const success = statusCode >= 200 && statusCode < 300;
                 this.portLatency(time, 1);
-                report.push(`${Date.now()},${time},${client.opts.method} ${client.opts.path},${statusCode},${client.parser.info.statusMessage},ut,application/json,${success},${bytes},${client.opts.requests[0].requestBuffer.length}`);
+                name = name || `${client.opts.method} ${client.opts.path}`;
+                report.push(`${Date.now()},${time},${name},${statusCode},${client.parser.info.statusMessage},ut,application/json,${success},${bytes},${client.opts.requests[0].requestBuffer.length}`);
             });
             result.on('done', () => {
                 fs.writeFileSync(join(this.config.report, basename(filename || method.replace(/\//g, '-')) + '.csv'), report.join('\n'));

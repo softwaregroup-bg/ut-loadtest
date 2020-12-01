@@ -2,11 +2,12 @@ module.exports = [function load() {
     return {
         execute: function(test, bus, run) {
             return run(test, bus, [{
-                method: 'loadtest/transferFlow.push.execute',
-                name: 'transfer using simulator',
+                method: 'loadtest/health',
+                name: 'health check',
                 params: () => ({
                     autocannon: {
                         method: 'GET',
+                        name: 'health check',
                         path: '/healthz',
                         duration: 5
                     }
