@@ -90,7 +90,7 @@ module.exports = ({
                 const success = statusCode >= 200 && statusCode < 300;
                 this.portLatency(time, 1);
                 name = name || `${client.opts.method} ${client.opts.path}`;
-                report.push(`${Date.now()},${time},${name},${statusCode},${client.parser.info.statusMessage},ut,application/json,${success},${bytes},${client.opts.requests[0].requestBuffer.length}`);
+                report.push(`${Date.now()},${Math.round(time)},${name},${statusCode},${client.parser.info.statusMessage},ut,application/json,${success},${bytes},${client.opts.requests[0].requestBuffer.length}`);
             });
             result.on('done', () => {
                 fs.writeFileSync(join(this.config.report, basename(filename || method.replace(/\//g, '-')) + '.csv'), report.join('\n'));
