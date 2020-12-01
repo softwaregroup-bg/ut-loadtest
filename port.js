@@ -15,7 +15,6 @@ module.exports = ({
         return {
             type: 'loadtest',
             imports: [/\.loadtest$/],
-            logLevel: 'trace',
             mle: {},
             autocannon: {
                 idReplacement: true,
