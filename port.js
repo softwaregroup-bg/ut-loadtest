@@ -16,7 +16,6 @@ module.exports = ({
             type: 'loadtest',
             imports: [/\.loadtest$/],
             logLevel: 'trace',
-            namespace: ['loadtest/transferFlow'],
             mle: {},
             autocannon: {
                 idReplacement: true,
