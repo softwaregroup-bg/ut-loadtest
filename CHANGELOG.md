@@ -1,3 +1,12 @@
+## [6.1.2](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.1...v6.1.2) (2020-12-01)
+
+
+### Bug Fixes
+
+* remove default loglevel ([009a3e4](https://github.com/softwaregroup-bg/ut-loadtest/commit/009a3e49a365a410419ebf5de4864db641008d43))
+
+
+
 ## [6.1.1](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.0...v6.1.1) (2020-12-01)
 
 
