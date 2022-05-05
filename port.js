@@ -27,7 +27,7 @@ module.exports = ({
         };
     }
 
-    init() {
+    async init() {
         const result = super.init(...arguments);
         this.bytesSent = this.counter && this.counter('counter', 'bs', 'Bytes sent', 300);
         this.bytesReceived = this.counter && this.counter('counter', 'br', 'Bytes received', 300);
@@ -37,7 +37,7 @@ module.exports = ({
         };
         this.gateway = gateway({
             serverInfo: () => '',
-            mleClient: jose(this.config.mle || {}),
+            mleClient: await jose(this.config.mle || {}),
             errors,
             get
         });

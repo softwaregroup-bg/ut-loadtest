@@ -15,13 +15,13 @@
         "ut-browser-request": "^1.0.2"
     },
     "devDependencies": {
-        "tap": "^14.11.0",
+        "tap": "^16.2.0",
         "ut-telemetry": "^7.2.0",
-        "ut-run": "^10.44.4",
+        "ut-run": "^10.68.0",
         "ut-tools": "^6.34.3"
     },
     "peerDependencies": {
-        "ut-bus": "^7.36.0"
+        "ut-bus": "^7.59.0"
     },
     "scripts": {
         "lint": "ut-lint .",
