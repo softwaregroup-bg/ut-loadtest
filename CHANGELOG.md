@@ -1,3 +1,12 @@
+## [6.1.4](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.3...v6.1.4) (2022-05-05)
+
+
+### Bug Fixes
+
+* jose 4 #UTCORE-121 ([08ffdec](https://github.com/softwaregroup-bg/ut-loadtest/commit/08ffdec980f5600d4713752babba486d0f74a5bf)), closes [#UTCORE-121](https://github.com/softwaregroup-bg/ut-loadtest/issues/UTCORE-121)
+
+
+
 ## [6.1.3](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.2...v6.1.3) (2020-12-02)
 
 
