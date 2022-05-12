@@ -1,3 +1,12 @@
+# [6.2.0](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.4...v6.2.0) (2022-05-12)
+
+
+### Features
+
+* log metrics #UTCORE-121 ([2c92c13](https://github.com/softwaregroup-bg/ut-loadtest/commit/2c92c133848105a60710fe2c93bc7a4a45db9638)), closes [#UTCORE-121](https://github.com/softwaregroup-bg/ut-loadtest/issues/UTCORE-121)
+
+
+
 ## [6.1.4](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.3...v6.1.4) (2022-05-05)
 
 
