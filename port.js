@@ -91,8 +91,21 @@ module.exports = ({
                 name = name || `${client.opts.method} ${client.opts.path}`;
                 report.push(`${Date.now()},${Math.round(time)},${name},${statusCode},${client.parser.info.statusMessage},ut,application/json,${success},${bytes},${client.opts.requests[0].requestBuffer.length}`);
             });
-            result.on('done', () => {
+            result.on('done', results => {
                 fs.writeFileSync(join(this.config.report, basename(filename || method.replace(/\//g, '-')) + '.csv'), report.join('\n'));
+                const {
+                    requests: {
+                        average: tps,
+                        sent: count
+                    },
+                    latency: {
+                        average: latency
+                    },
+                    throughput: {
+                        average: bps
+                    }
+                } = results;
+                this.log?.warn?.({tps, count, latency, bps, $meta: {mtid: 'request', method}});
             });
         }
 
