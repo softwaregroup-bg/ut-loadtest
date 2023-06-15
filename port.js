@@ -31,6 +31,34 @@ module.exports = ({
         const result = super.init(...arguments);
         this.bytesSent = this.counter && this.counter('counter', 'bs', 'Bytes sent', 300);
         this.bytesReceived = this.counter && this.counter('counter', 'br', 'Bytes received', 300);
+        this.loadCounter = this.bus.performance.register(
+            'load_cnt',
+            'counter',
+            null,
+            this.config.id + ' load count',
+            'tagged',
+            {name: this.config.id});
+        this.loadTps = this.bus.performance.register(
+            'load_tps',
+            'counter',
+            null,
+            this.config.id + ' load TPS',
+            'tagged',
+            {name: this.config.id});
+        this.loadLatency = this.bus.performance.register(
+            'load_lt',
+            'counter',
+            null,
+            this.config.id + ' load latency',
+            'tagged',
+            {name: this.config.id});
+        this.loadBps = this.bus.performance.register(
+            'load_bps',
+            'counter',
+            null,
+            this.config.id + ' load BPS',
+            'tagged',
+            {name: this.config.id});
         const errors = registerErrors(errorsJson);
         const get = async url => {
             return (await httpGet(url)).body;
@@ -105,6 +133,10 @@ module.exports = ({
                         average: bps
                     }
                 } = results;
+                this.loadCounter(method, {m: method}, count);
+                this.loadTps(method, {m: method}, tps);
+                this.loadLatency(method, {m: method}, latency);
+                this.loadBps(method, {m: method}, bps);
                 this.log?.warn?.({tps, count, latency, bps, $meta: {mtid: 'request', method}});
             });
         }
