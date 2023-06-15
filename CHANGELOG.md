@@ -1,3 +1,12 @@
+# [6.3.0](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.2.0...v6.3.0) (2023-06-15)
+
+
+### Features
+
+* build metrics ([e7b216e](https://github.com/softwaregroup-bg/ut-loadtest/commit/e7b216eba392ee651e61034559cf7cda309e0827))
+
+
+
 # [6.2.0](https://github.com/softwaregroup-bg/ut-loadtest/compare/v6.1.4...v6.2.0) (2022-05-12)
 
 

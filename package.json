@@ -1,6 +1,6 @@
 {
     "name": "ut-loadtest",
-    "version": "6.2.0",
+    "version": "6.3.0",
     "description": "Load test automation module",
     "main": "index.js",
     "browser": {
