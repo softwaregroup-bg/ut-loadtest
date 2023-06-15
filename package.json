@@ -15,10 +15,10 @@
         "ut-browser-request": "^1.0.2"
     },
     "devDependencies": {
+        "form-data": "^2.5.1",
         "tap": "^16.2.0",
         "ut-telemetry": "^7.2.0",
-        "ut-run": "^10.68.0",
-        "ut-tools": "^6.34.3"
+        "ut-run": "^10.68.0"
     },
     "peerDependencies": {
         "ut-bus": "^7.59.0"
